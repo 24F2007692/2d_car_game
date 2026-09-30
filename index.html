@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retro 2D Car Racing</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="game-container">
+        <header>
+            <h1>ROAD RUSH 2D</h1>
+            <div id="hud">
+                <div class="hud-item">SCORE: <span id="score">0</span></div>
+                <div class="hud-item">SPEED: <span id="speed">0</span> MPH</div>
+                <div class="hud-item">DISTANCE: <span id="distance">0</span> m</div>
+            </div>
+        </header>
+
+        <div id="canvas-wrapper">
+            <canvas id="gameCanvas" width="800" height="600"></canvas>
+            
+            <!-- Screens overlay inside canvas wrapper -->
+            <div id="start-screen" class="screen">
+                <h2>READY TO RACE?</h2>
+                <p>Use <strong>LEFT/RIGHT</strong> arrows or <strong>A/D</strong> to steer.</p>
+                <p>Use <strong>UP/DOWN</strong> or <strong>W/S</strong> to accelerate/brake.</p>
+                <button id="start-btn" class="btn">START ENGINE</button>
+            </div>
+
+            <div id="game-over-screen" class="screen hidden">
+                <h2>CRASH! GAME OVER</h2>
+                <p>Final Score: <span id="final-score">0</span></p>
+                <p>Distance Traveled: <span id="final-distance">0</span> m</p>
+                <button id="restart-btn" class="btn">PLAY AGAIN</button>
+            </div>
+        </div>
+        
+        <footer>
+            <p>Avoid traffic, collect boosts, survive as long as you can!</p>
+        </footer>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html>
